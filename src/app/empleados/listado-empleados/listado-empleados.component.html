@@ -1,0 +1,29 @@
+<div class="container mt-4 w-100" style="background-color: burlywood;">
+  <p>Componete 3</p>
+  <table class="table table-striped-columns">
+    <thead >
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre Empleado</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Celular</th>
+        <th scope="col">Fecha Nacimiento</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados;">
+        <td>{{ empleado.numEmpleado }}</td>
+        <td>{{ empleado.nombre }}</td>
+        <td>{{ empleado.correo }}</td>
+        <td>{{ empleado.telefono }}</td>
+        <td>{{ empleado.fechaNacimiento }}</td>
+        <td>{{ empleado.sexo  }}</td>
+        <td>
+          <button class="btn btn-outline-danger" (click)="eliminarEmpleado(empleado.numEmpleado)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
